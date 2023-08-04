@@ -19,7 +19,7 @@ export const HomePage = () => {
         <div className="HomePage">
             <header className="HomePage__logo">
                 <a href="/">
-                    <img src={Logo} alt="chatanalytics.app logo" />
+                    <img src={Logo} alt="chatanalytics.vercel.app logo" />
                 </a>
             </header>
             <div

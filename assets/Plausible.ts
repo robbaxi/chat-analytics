@@ -1,12 +1,12 @@
-const PLAUSIBLE_URL = typeof env !== "undefined" && env.isProd ? "https://p.chatanalytics.app" : "";
+const PLAUSIBLE_URL = typeof env !== "undefined" && env.isProd ? "https://p.chatanalytics.vercel.app" : "";
 const ALLOWED_PATHS = ["", "/demo"];
 
 const isOfficialHostname = (hostname: string): boolean =>
-    hostname === "chatanalytics.app" || hostname.endsWith(".chat-analytics.pages.dev");
+    hostname === "chatanalytics.vercel.app" || hostname.endsWith(".chat-analytics.pages.dev");
 
 export const plausible = (name: "pageview" | string, props?: { [key: string]: string }) => {
     // We want the url where:
-    // - the hostname is always "chatanalytics.app"
+    // - the hostname is always "chatanalytics.vercel.app"
     //   - otherwise fallback to "/report"
     // - the path is either "", "/", "/demo" or "/report"
     //   - otherwise fallback to "/report"
@@ -20,9 +20,9 @@ export const plausible = (name: "pageview" | string, props?: { [key: string]: st
     }
 
     const data = {
-        domain: "chatanalytics.app",
+        domain: "chatanalytics.vercel.app",
         name,
-        url: `https://chatanalytics.app${pathname}${window.location.search}`,
+        url: `https://chatanalytics.vercel.app${pathname}${window.location.search}`,
         referrer: document.referrer,
         screen_width: window.innerWidth,
         props: JSON.stringify(props),

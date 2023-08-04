@@ -18,15 +18,12 @@ export default () => (
     <div className="Footer">
         <span>
             <span>Generated with</span>
-            <a href="https://chatanalytics.app?utm_source=report" target="_blank">
-                https://chatanalytics.app
+            <a href="https://chatanalytics.vercel.app" target="_blank">
+                https://chatanalytics.vercel.app
             </a>
         </span>
         <span>•</span>
         <span>
-            <a href="https://github.com/mlomb/chat-analytics" target="_blank">
-                <img src={GitHub} alt="GitHub" />
-            </a>
             <Tooltip content={extraInfo()}>
                 <span className="Footer__build">build {env.build.commitHash}</span>
             </Tooltip>

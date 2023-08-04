@@ -120,8 +120,8 @@ const Header = (props: Props) => {
                     <h2>chat analysis report</h2>
                 </span>
                 <div className="Header__link">
-                    <a href="https://chatanalytics.app?utm_source=report" target="_blank">
-                        <img src={Logo} alt="chatanalytics.app logo" height="60" />
+                    <a href="https://chatanalytics.vercel.app" target="_blank">
+                        <img src={Logo} alt="chatanalytics.vercel.app logo" height="60" />
                     </a>
                 </div>
             </header>

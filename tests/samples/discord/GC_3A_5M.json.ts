@@ -35,7 +35,7 @@ export const expectedParse: ExpectedPartialParseResult = {
         {
             id: "1064991070322180096",
             channelId: "1064990764406419508",
-            textContent: "hey @mlomb whats up, check out https://chatanalytics.app",
+            textContent: "hey @mlomb whats up, check out https://chatanalytics.vercel.app",
             authorId: PAUTHOR_LOMBI.id,
             timestamp: Date.parse("2023-01-17T19:34:17.742+00:00"),
         },
@@ -80,7 +80,7 @@ export const expectedDatabase: ExpectedPartialDatabaseResult = {
                 ["check", 1],
             ],
             mentions: [["mlomb", 1]],
-            domains: [["chatanalytics.app", 1]],
+            domains: [["chatanalytics.vercel.app", 1]],
         },
         {
             authorName: AUTHOR_MLOMB.n,

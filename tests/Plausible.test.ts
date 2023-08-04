@@ -16,15 +16,15 @@ const testPageview = ({ location, expectedPath }: { location: string; expectedPa
     plausible("pageview");
 
     const fetchBody = JSON.parse(fetchMock.mock.calls[0][1].body);
-    expect(fetchBody.url).toBe(`https://chatanalytics.app${expectedPath}`);
+    expect(fetchBody.url).toBe(`https://chatanalytics.vercel.app${expectedPath}`);
 };
 
 it.each([
-    { expectedPath: "", location: "https://chatanalytics.app" },
-    { expectedPath: "", location: "https://chatanalytics.app/" },
-    { expectedPath: "/demo", location: "https://chatanalytics.app/demo" },
-    { expectedPath: "/report", location: "https://chatanalytics.app/1bce0f51-c722-4a6b-9957-5588a601366c" },
-    { expectedPath: "/report", location: "blob:https://chatanalytics.app/1bce0f51-c722-4a6b-9957-5588a601366c" },
+    { expectedPath: "", location: "https://chatanalytics.vercel.app" },
+    { expectedPath: "", location: "https://chatanalytics.vercel.app/" },
+    { expectedPath: "/demo", location: "https://chatanalytics.vercel.app/demo" },
+    { expectedPath: "/report", location: "https://chatanalytics.vercel.app/1bce0f51-c722-4a6b-9957-5588a601366c" },
+    { expectedPath: "/report", location: "blob:https://chatanalytics.vercel.app/1bce0f51-c722-4a6b-9957-5588a601366c" },
     { expectedPath: "/report", location: "http://someuser.github.io" },
     { expectedPath: "/report", location: "http://someuser.github.io/Report - Chat Analytics.html" },
     { expectedPath: "/report", location: "http://someuser.github.io/somereport" },
@@ -38,11 +38,11 @@ it.each([
 it.each([
     {
         expectedPath: "?utm_source=report",
-        location: "https://chatanalytics.app/?utm_source=report",
+        location: "https://chatanalytics.vercel.app/?utm_source=report",
     },
     {
         expectedPath: "/demo?utm_source=facebook",
-        location: "https://chatanalytics.app/demo/?utm_source=facebook",
+        location: "https://chatanalytics.vercel.app/demo/?utm_source=facebook",
     },
     {
         expectedPath: "/report?utm_source=twitter",
